@@ -75,3 +75,8 @@ resource "aws_instance" "web" {
     Name = "${var.tag}"
   }
 }
+
+resource "aws_s3_bucket" "name-4141" {
+  bucket = "name-4141"
+  
+}
