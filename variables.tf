@@ -22,9 +22,9 @@ variable "iscreate" {
   default = "true"
 }
 
-variable "sg_id" {
-  default = "aws_security_group.allow_all.id"
-}
+# variable "sg_id" {
+#   default = "aws_security_group.allow_all.id"
+# }
 
 
 variable "keyname" {
