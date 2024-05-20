@@ -23,13 +23,13 @@ variable "iscreate" {
 }
 
 variable "sg_id" {
-  default = "sg-0d61315e929c9b42c"
+  default = "aws_security_group.allow_all.id"
 }
 
 
 variable "keyname" {
-  default = "EAST-KEY"
+  default = "clintontest"
 }
 variable "vpc_id" {
-  default = "vpc-070c3c4ddf310be5d"
+  default = "vpc-0da640490540f8fdd"
 }

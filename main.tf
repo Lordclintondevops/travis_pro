@@ -69,7 +69,7 @@ resource "aws_instance" "web" {
   ami                    = "ami-04b70fa74e45c3917"
   instance_type          = "${var.instance_type}"
   key_name               = "${var.keyname}"
-  vpc_security_group_ids = ["${var.sg_id}"]
+  vpc_security_group_ids = var.sg_id
 
   tags = {
     Name = "${var.tag}"
