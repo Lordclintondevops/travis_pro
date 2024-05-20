@@ -6,13 +6,13 @@ variable "tag" {
   default = "Demo-Instance"
 }
 
-variable "ami_name_value" {
-  default = "amzn-ami-vpc-nat*"
-}
+# # variable "ami_name_value" {
+#   default = "ubuntu/images/hvm-ssd-gp3/ubuntu-noble-24.04-amd64-server-20240423*"
+# }
 
-variable "ami_virtualization_type" {
-  default = "hvm"
-}
+# variable "ami_virtualization_type" {
+#   default = "hvm"
+# }
 
 variable "instance_type" {
   default = "t2.micro"

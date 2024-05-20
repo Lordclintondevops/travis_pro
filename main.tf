@@ -2,27 +2,38 @@ provider "aws" {
   region = "${var.region}"
 }
 
-data "aws_ami" "ubuntu" {
-  most_recent = true
+# data "aws_ami" "ubuntu" {
+#   most_recent = true
 
-  filter {
-    name   = "name"
-    values = ["${var.ami_name_value}"]
-  }
+#   filter {
+#     name   = "name"
+#     values = ["${var.ami_name_value}"]
+#   }
 
-  filter {
-    name   = "virtualization-type"
-    values = ["${var.ami_virtualization_type}"]
-  }
+  # filter {
+  #   name   = "virtualization-type"
+  #   values = ["${var.ami_virtualization_type}"]
+  # }
 
-  filter {
-    name = "owner-alias"
+  # filter {
+  #   name = "owner-alias"
 
-    values = [
-      "amazon",
-    ]
-  }
-}
+  #   values = [
+  #     "amazon",
+  #   ]
+  # }
+# }
+
+# data "aws_ami" "ubuntu" {
+#   most_recent = true
+
+#   filter {
+#     name   = "name"
+#     values = ["ubuntu/images/hvm-ssd/ubuntu-focal-20.04-amd64-server-*"]
+#   }
+
+#   owners = ["099720109477"]
+# }
 
 /*
 // Use Security Group module to create security group
@@ -55,7 +66,7 @@ resource "aws_security_group" "allow_all" {
 }
 
 resource "aws_instance" "web" {
-  ami                    = "${data.aws_ami.ubuntu.id}"
+  ami                    = "ami-04b70fa74e45c3917"
   instance_type          = "${var.instance_type}"
   key_name               = "${var.keyname}"
   vpc_security_group_ids = ["${var.sg_id}"]
