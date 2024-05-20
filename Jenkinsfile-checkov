@@ -9,6 +9,7 @@ pipeline {
         }
         stage ('install checkov') {
             steps {
+                sh 'sudo apt install python3-pip'
                 sh 'pip3 install checkov'
                 sh '/var/lib/jenkins/.local/bin/checkov --version'
             }
